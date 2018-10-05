@@ -1,0 +1,156 @@
+
+<div class="row">
+     <div class="col-lg-12">
+       <h3>Hi, <%=current_user.name%></h3>
+       <p>What would you like to do?</p> <br>
+     </div>
+ <br>
+ </div>
+ <br>
+<div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body" style="background-color: #00568c";>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="circleBase circle">
+              <div class="text-center stacked-bar-info-title-points" style="margin-top: 50px";>
+                     <h3>POINTS</h3>
+                  <p>200 out if 500 | <a href="">View <i _ngcontent-c3="" class="fa fa-chevron-right"></i></a></p>
+                  <button id="topup" class="btn btn-default">Top up</button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Things you can do online</h3>
+      <hr>
+      <div class="row">
+         <div class="col-lg-6 col-md-8">
+           <a href="#">
+             <div class="card ">
+                 <div class="card-header panel-green">
+                     <div class="row">
+                         <div class="col-xs-3">
+                             <i class="fa  fa-comments-o" aria-hidden="true"></i> SMS
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+           </a>
+         </div>
+         <div class="col-lg-6 col-md-8">
+           <a href="#">
+             <div class="card ">
+                 <div class="card-header panel-green">
+                     <div class="row">
+                         <div class="col-xs-3">
+                             <i class="fa  fa-phone-square" aria-hidden="true"></i></i> Voice
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+           </a>
+         </div>
+
+    </div>
+
+    <div class="row">
+       <div class="col-lg-6 col-md-8">
+         <a href="#">
+           <div class="card ">
+               <div class="card-header panel-green">
+                   <div class="row">
+                       <div class="col-xs-3">
+                           <i class="fa fa-plug" aria-hidden="true"></i> Electricity
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+         </a>
+       </div>
+       <div class="col-lg-6 col-md-8">
+         <a href="#">
+           <div class="card">
+               <div class="card-header panel-green">
+                   <div class="row">
+                       <div class="col-xs-3">
+
+                          <i class="fa fa-shopping-basket" aria-hidden="true"></i> shopping
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+         </a>
+       </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <a href="#">
+        <div class="card ">
+            <div class="card-header panel-green">
+                <div class="row">
+                    <div class="col-xs-3">
+                       <i class="fa fa-television" aria-hidden="true"></i>  Competitions
+                    </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6">
+      <a href="#">
+        <div class="card ">
+            <div class="card-header panel-green">
+                <div class="row">
+                    <div class="col-xs-3">
+                       <i class="fa fa-arrow-down" aria-hidden="true"></i> <i class="fa fa-arrow-up" aria-hidden="true"></i> Data
+                    </div>
+                </div>
+            </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 col-md-6">
+      <a href="#">
+        <div class="card ">
+            <div class="card-header panel-green">
+                <div class="row">
+                    <div class="col-xs-3">
+                       <i class="fa fa-fa-ticket" aria-hidden="true"></i>  Tickets
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <section id="usage">
+
+    <p> USAGE | <%=current_user.phone%> <span class="btn btn-secondary"><i class="fa fa-calendar "></i> <%= Date.today %> </span> </p>
+    <hr>
+     <%=render'home/charts/data_usage'%> <br>
+     <%=render'home/charts/voice_usage'%>
+     <br>
+     <button id="topup" class="btn btn-block btn-lg btn-primary">Top up</button>
+  </section>
+
+</div>

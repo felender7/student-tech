@@ -1,0 +1,25 @@
+<%if user_signed_in?%>
+<div class="nav-scroller bg-white box-shadow">
+  <nav class="nav nav-underline">
+    <a class="nav-link active" href="#">Dashboard</a>
+    <a class="nav-link" href="#">
+      Data
+      <span class="badge badge-pill bg-light align-text-bottom">26mb</span>
+    </a>
+
+    <a class="nav-link" href="#">
+      Voice
+      <span class="badge badge-pill bg-light align-text-bottom">0mins</span>
+    </a>
+
+    <a class="nav-link" href="#">
+      SMS
+      <span class="badge badge-pill bg-light align-text-bottom">1</span>
+    </a>
+
+    <a class="nav-link" href="#">
+    <%=render'shared/translator'%>
+    </a>
+  </nav>
+</div>
+<%end%>
