@@ -20,7 +20,15 @@ class ApplicationController < ActionController::Base
                                                          :course,
                                                          :year,
                                                          :alternative_email,
-                                                         :type_of_registration])
+                                                         :type_of_registration,
+                                                         :start_year,
+                                                         :end_year,
+                                                         :company_name,
+                                                         :type_of_registration,
+                                                         :comercial_name_of_the_business,
+                                                         :company_address,
+                                                         :vat_number,
+                                                         :company_contact])
 
       devise_parameter_sanitizer.permit(:account_update, keys: [:name,
                                                          :phone,
@@ -36,7 +44,15 @@ class ApplicationController < ActionController::Base
                                                          :course,
                                                          :year,
                                                          :alternative_email,
-                                                         :type_of_registration])
+                                                         :type_of_registration,
+                                                         :start_year,
+                                                         :end_year,
+                                                         :company_name,
+                                                         :type_of_registration,
+                                                         :comercial_name_of_the_business,
+                                                         :company_address,
+                                                         :vat_number,
+                                                         :company_contact])
     end
 
 end

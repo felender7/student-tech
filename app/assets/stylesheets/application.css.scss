@@ -15,6 +15,8 @@ $body-color           :#6c757d !default;
 @import "sticky-footer";
 @import "announcements";
 
+
+.bg-black {background-color: #1e272e;}
 // Fixes bootstrap nav-brand container overlap
 @include media-breakpoint-down(xs) {
   .container {
@@ -70,6 +72,7 @@ hr {
   z-index: 2;
   height: 2.75rem;
   overflow-y: hidden;
+
 }
 
 .nav-scroller .nav {
@@ -175,31 +178,15 @@ nav.bg-light {background-color: $primary-color !important;}
     float: left;
 }
 
-.card{
-  margin-bottom: 20px;
-
-}
-.content-inside {
-  padding-top: 70px;
-}
-
-
-
-
-.panel-green > a {
-    color: #5cb85c;
-}
-
-.panel-green > a:hover {
-    color: #3d8b3d;
-}
+.card{margin-bottom: 20px;}
+.content-inside {padding-top: 70px;}
+.panel-green > a {color: #5cb85c;}
+.panel-green > a:hover {color: #3d8b3d;}
 .panel-green {
   border-bottom: 1px solid;
   border-color: $primary-color;
   border-radius: 1px;
 }
-
-
 
 .btn-primary {
     color: #fff;
@@ -218,7 +205,7 @@ nav.bg-light {background-color: $primary-color !important;}
 
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 
@@ -270,4 +257,16 @@ body > .alert {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+.navbar.navbar-dark .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+    -webkit-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.profile-photo{
+  display: block;
+  float:left;
+  margin-right:20px;
 }

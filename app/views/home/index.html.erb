@@ -1,51 +1,26 @@
 
-<div class="row">
-     <div class="col-lg-12">
-       <div class="jumbotron">
-         <div class="row">
-           <div class="col-lg-2"><%= image_tag gravatar_image_url(current_user.email, size: 80), height: 100, width: 100, class: "rounded" %></div>
-           <div class="col-lg-6">
+
+         <div class="row jumbotron no-gutters">
+           <div class="col-lg-12">
               <% if current_user.name.present? %>
               <h3>Hi again, <%=current_user.name%></h3>
                 <small class="badge badge-success"><i class="fa fa-user" aria-hidden="true"></i> <%=current_user.type_of_registration%></small>
                 <small class="badge badge-warning" > <i class="fa fa-sign-in" aria-hidden="true"></i> <%=current_user.sign_in_count%></small>
+                <small class="badge badge-danger" >   <i class="fa fa-calendar "></i> <%= Date.today %> </small>
+                  <hr>
                  <p>What would you like to do?</p>
                  <a href="/users/edit" class='btn btn-primary'> Manage Profile</a>
                  <a href="#" class='btn btn-primary'> Summery</a>
                <%else%>
-
 
                <h3 class="text-danger"> <i class="fa fa-exclamation-circle" aria-hidden="true"></i>  Hi, your profile is incomplete </h3> <br>
                 <a href="/users/edit" class='btn btn-primary'> Update Profile</a>
              <%end%>
            </div>
         </div>
-       </div>
-     </div>
- <br>
- </div>
+
  <br>
 <div class="row">
-    <div class="col-md-4">
-      <div class="card jumbotron">
-        <div class="card-body";>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="circleBase circle">
-              <div class="text-center stacked-bar-info-title-points" style="margin-top: 50px";>
-                     <h3>POINTS</h3>
-                  <p>200 out if 500 | <a href="">View <i _ngcontent-c3="" class="fa fa-chevron-right"></i></a></p>
-                  <button id="topup" class="btn btn-default">Top up</button>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="col-md-4">
       <h3>Things you can do online</h3>
       <hr>
@@ -160,15 +135,23 @@
     </div>
   </div>
 </div>
-<div class="col-md-4">
-  <section id="usage">
 
-    <p> USAGE | <%=current_user.phone%> <span class="btn btn-secondary"><i class="fa fa-calendar "></i> <%= Date.today %> </span> </p>
-    <hr>
-     <%=render'home/charts/data_usage'%> <br>
-     <%=render'home/charts/voice_usage'%>
-     <br>
-     <button id="topup" class="btn btn-block btn-lg btn-primary">Top up</button>
-  </section>
+<div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <%=render'home/charts/points'%>
+            <%=render'home/charts/credit'%>
+            <%=render'home/charts/data'%>
+            <%=render'home/charts/voice'%>
+          </div>
+        </div>
+</div>
 
+<div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h3>Latest News</h3>
+            <hr>
+          </div>
+        </div>
 </div>
