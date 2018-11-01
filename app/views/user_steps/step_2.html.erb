@@ -1,0 +1,42 @@
+<h3>Tell us a little about yourself.</h3>
+<hr>
+<div class="row">
+  <div class="col-lg-6">
+    <%= render layout: 'form' do |f| %>
+      <div class="form-group">
+        <%= f.label :civil_status %>
+        <%= f.text_field :civil_status, class:'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :home_address %>
+        <%= f.text_area :home_address,row:5 ,class:'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :school %>
+        <%= f.text_field :school, class:'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :number_of_student %>
+        <%= f.text_field :number_of_student, class:'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :course %>
+        <%= f.text_field :course, class:'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :year %>
+        <%= f.text_field :year, class:'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :alternative_email %>
+        <%= f.text_field :alternative_email, class:'form-control' %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
