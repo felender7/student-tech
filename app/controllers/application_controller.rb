@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
                                                          :number_of_student,
                                                          :course,
                                                          :year,
-                                                         :alternative_email])
+                                                         :alternative_email,
+                                                         :type_of_registration])
 
       devise_parameter_sanitizer.permit(:account_update, keys: [:name,
                                                          :phone,
@@ -34,7 +35,8 @@ class ApplicationController < ActionController::Base
                                                          :number_of_student,
                                                          :course,
                                                          :year,
-                                                         :alternative_email])
+                                                         :alternative_email,
+                                                         :type_of_registration])
     end
 
 end
